@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FACEIT Map Stats</title>
+</head>
+<body>
+
+<h2>6 Players Map Stats</h2>
+
+<button onclick="load()">Load stats</button>
+
+<pre id="out">Click button to load data</pre>
+
+<script>
+async function load() {
+  document.getElementById("out").innerText = "Loading...";
+
+  const res = await fetch("/api/stats");
+  const data = await res.json();
+
+  document.getElementById("out").innerText =
+    JSON.stringify(data, null, 2);
+}
+</script>
+
+</body>
+</html>
