@@ -34,7 +34,7 @@ async function fetchPlayer(name) {
     `https://open.faceit.com/data/v4/players?nickname=${name}`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.FACEIT_KEY}`
+        Authorization: `Bearer ${process.env.ec8b77b8-69b6-4952-9f27-d261f8096ad7}`
       }
     }
   );
@@ -47,7 +47,7 @@ async function fetchMatches(id) {
     `https://open.faceit.com/data/v4/players/${id}/history?game=cs2&limit=20`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.FACEIT_KEY}`
+        Authorization: `Bearer ${process.env.ec8b77b8-69b6-4952-9f27-d261f8096ad7}`
       }
     }
   );
